@@ -26,7 +26,8 @@ export default defineManifest({
   },
   content_scripts: [
     {
-      matches: ['http://*/*', 'https://*/*'],
+      // matches: ['http://*/*', 'https://*/*'],
+      matches: ['https://*.upwork.com/nx/find-work/*', 'https://*.upwork.com/nx/search/jobs/*'],
       js: ['src/contentScript/index.js'],
     },
   ],
@@ -39,7 +40,7 @@ export default defineManifest({
       matches: [],
     },
   ],
-  permissions: ['sidePanel', 'storage'],
+  permissions: ['sidePanel', 'storage', 'tabs'],
   chrome_url_overrides: {
     newtab: 'newtab.html',
   },

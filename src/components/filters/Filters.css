@@ -1,0 +1,163 @@
+/*
+ #3f51b5
+ rgb(0,150,136)
+ */
+body{
+    width: 600px;
+    font-size: 14px;
+    padding: 10px;
+}
+
+button{
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    background: rgb(0,150,136);
+    transition: background 0.8s;
+    color: rgb(255,255,255);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),
+    0 3px 1px -2px rgba(0,0,0,.2),
+    0 1px 5px 0 rgba(0,0,0,.12);
+}
+button:active{
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,.14),
+    0 1px 10px 0 rgba(0,0,0,.12),
+    0 2px 4px -1px rgba(0,0,0,.2);
+}
+
+h2{
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.hint{
+    color: #aaa;
+    font-size: 80%;
+}
+
+#content{
+    display: flex;
+}
+
+#content > *{
+    border-right: 1px solid #ccc;
+    padding: 0 10px;
+    width: 50%;
+    flex: 1 1;
+}
+
+#content > :first-child{
+    padding-left: 0;
+}
+
+#content > :last-child{
+    border-right: none;
+    padding-right: 0;
+}
+
+#countries{
+    /*padding: 5px;*/
+    /*border-bottom: 1px solid #999;*/
+}
+.inputList{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.chip{
+    height: 30px;
+    line-height: 30px;
+    padding: 0 5px 0 11px;
+    border: 0;
+    border-radius: 15px;
+    background-color: #dedede;
+    display: flex;
+    color: rgba(0,0,0,.87);
+    font-size: 0;
+    white-space: nowrap;
+    margin: 10px 10px 0 0;
+    align-items: center;
+}
+
+.chipContent{
+    font-size: 13px;
+    vertical-align: middle;
+    display: flex;
+}
+
+.chipButton{
+    margin-left: 5px;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(0,150,136);
+}
+.formButton:after,
+.formButton:before,
+.chipButton:after,
+.chipButton:before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    left: 50%;
+    top: 50%;
+    background-color: #fff;
+}
+.chipButton:before{
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.chipButton:after{
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+.formButton:before{
+    transform: translate(-50%, -50%);
+}
+.formButton:after{
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.addFilterForm{
+    display: flex;
+    padding: 10px 0 0;
+    margin: auto 0 0;
+}
+.addFilterForm input[name="name"]{
+    padding: 5px;
+    border: 1px solid #ddd;
+    height: 30px;
+    width: calc(100% - 40px);
+}
+.addFilterForm.duplicated .formButton{
+    transition: none;
+    background-color: red;
+}
+.formButton{
+    position: relative;
+    width: 30px;
+    margin-left: 10px;
+    height: 30px;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+}
+
+section h3{
+    margin: 0 0 10px;
+}
+
+#cleanHistory{
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    height: 50px;
+}
+
+#titles{
+
+}
